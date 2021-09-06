@@ -1,6 +1,15 @@
 // Write code to create a function that accepts a string and determines if the string is a valid number. You may not use any regex, built-in methods type conversion to accomplish this.
 
-var isNumeric = function(str) {
+// my solution
+var isNumeric = function (str) {
+  // convert string to number
+  let isNumber = Number(str);
+  // ternary operator to check if valid number
+  return isNumber ? true : false;
+};
+
+// Provided solution
+var isNumeric = function (str) {
   var digits = {
     0: true,
     1: true,
@@ -11,7 +20,7 @@ var isNumeric = function(str) {
     6: true,
     7: true,
     8: true,
-    9: true
+    9: true,
   };
 
   var hasNum = false;
@@ -49,3 +58,5 @@ var isNumeric = function(str) {
 
   return false;
 };
+
+// All Tests Passed when running test HTML
