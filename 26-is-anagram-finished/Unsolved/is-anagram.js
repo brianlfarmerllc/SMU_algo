@@ -1,7 +1,17 @@
 // Write code to create a function that accepts two strings
 // Return true if the strings are anagrams of each other, otherwise return false
 
-var isAnagram = function(strA, strB) {
+// my solution
+var isAnagram = function (strA, strB) {
+  // sort letters in acending order in both strings and join together
+  let sortedA = strA.split("").sort().join("");
+  let sortedB = strB.split("").sort().join("");
+  // compare two stings for equlity and return tru or false
+  return sortedA === sortedB ? true : false;
+};
+
+//provided solution
+var isAnagram2 = function (strA, strB) {
   if (strA.length !== strB.length) {
     return false;
   }
@@ -26,3 +36,5 @@ var isAnagram = function(strA, strB) {
 
   return true;
 };
+
+// All test.html test passed
